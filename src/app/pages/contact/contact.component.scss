@@ -1,0 +1,77 @@
+@use '../../../styles/variables' as *;
+
+.contact {
+  padding: 3rem 0;
+  background: $dark-blue-mid;
+  color: $text-color-light;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: $primary-color;
+  }
+
+  form {
+    max-width: 600px;
+    margin: 0 auto;
+
+    .form-group {
+      margin-bottom: 1.5rem;
+
+      label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        padding: 0.75rem;
+        border-radius: 8px;
+        border: 1px solid $border-color-light;
+        background: $dark-blue-start;
+        color: $text-color-light;
+        font-size: 1rem;
+
+        &:focus {
+          outline: none;
+          border-color: $primary-color;
+          box-shadow: 0 0 5px $primary-color;
+        }
+      }
+
+      .error {
+        color: $secondary-color;
+        font-size: 0.875rem;
+        margin-top: 0.25rem;
+      }
+    }
+
+    button {
+      background-color: $primary-color;
+      color: $text-color-light;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: $border-radius;
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      &:disabled {
+        background-color: $primary-color-hover;
+        cursor: not-allowed;
+      }
+
+      &:hover:not(:disabled) {
+        background-color: $primary-color-hover;
+      }
+    }
+  }
+
+  .success {
+    margin-top: 1rem;
+    text-align: center;
+    color: $secondary-color;
+    font-weight: 600;
+  }
+}

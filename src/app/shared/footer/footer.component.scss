@@ -1,0 +1,28 @@
+@use '../../../styles/variables' as *;
+
+footer {
+  background: $background-color;
+  color: $text-color;
+  padding: 2rem 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+
+  a {
+    color: $primary-color;
+    text-decoration: none;
+    margin: 0 0.5rem;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $primary-color-hover;
+    }
+  }
+
+  .socials {
+    margin-top: 1rem;
+
+    a {
+      font-size: 1.2rem;
+    }
+  }
+}
