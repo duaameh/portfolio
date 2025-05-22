@@ -7,6 +7,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+      height: 90px;
+
   border-bottom: 1px solid $primary-color-muted;
 
   .logo a {
@@ -19,10 +21,10 @@
   .nav-links {
     list-style: none;
     display: flex;
-    gap: 1.5rem;
+    gap: 5.5rem;
 
     li a {
-      color: $text-color;
+      color: #fff;
       text-decoration: none;
       font-weight: 500;
       transition: color 0.3s ease;

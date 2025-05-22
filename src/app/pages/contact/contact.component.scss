@@ -1,77 +1,152 @@
-@use '../../../styles/variables' as *;
+// @use '../../../styles/variables' as *;
 
-.contact {
-  padding: 3rem 0;
-  background: $dark-blue-mid;
-  color: $text-color-light;
+// .contact {
+//   padding: 3rem 0;
+//   background: $dark-blue-mid;
+//   color: $text-color-light;
 
-  h2 {
-    text-align: center;
-    margin-bottom: 2rem;
-    color: $primary-color;
-  }
+//   h2 {
+//     text-align: center;
+//     margin-bottom: 2rem;
+//     color: $primary-color;
+//   }
 
-  form {
-    max-width: 600px;
-    margin: 0 auto;
+//   form {
+//     max-width: 600px;
+//     margin: 0 auto;
 
-    .form-group {
-      margin-bottom: 1.5rem;
+//     .form-group {
+//       margin-bottom: 1.5rem;
 
-      label {
-        display: block;
-        margin-bottom: 0.5rem;
-        font-weight: 600;
-      }
+//       label {
+//         display: block;
+//         margin-bottom: 0.5rem;
+//         font-weight: 600;
+//       }
 
-      input,
-      textarea {
-        width: 100%;
-        padding: 0.75rem;
-        border-radius: 8px;
-        border: 1px solid $border-color-light;
-        background: $dark-blue-start;
-        color: $text-color-light;
-        font-size: 1rem;
+//       input,
+//       textarea {
+//         width: 100%;
+//         padding: 0.75rem;
+//         border-radius: 8px;
+//         border: 1px solid $border-color-light;
+//         background: $dark-blue-start;
+//         color: $text-color-light;
+//         font-size: 1rem;
 
-        &:focus {
-          outline: none;
-          border-color: $primary-color;
-          box-shadow: 0 0 5px $primary-color;
+//         &:focus {
+//           outline: none;
+//           border-color: $primary-color;
+//           box-shadow: 0 0 5px $primary-color;
+//         }
+//       }
+
+//       .error {
+//         color: $secondary-color;
+//         font-size: 0.875rem;
+//         margin-top: 0.25rem;
+//       }
+//     }
+
+//     button {
+//       background-color: $primary-color;
+//       color: $text-color-light;
+//       border: none;
+//       padding: 0.75rem 1.5rem;
+//       border-radius: $border-radius;
+//       cursor: pointer;
+//       transition: background-color 0.3s;
+
+//       &:disabled {
+//         background-color: $primary-color-hover;
+//         cursor: not-allowed;
+//       }
+
+//       &:hover:not(:disabled) {
+//         background-color: $primary-color-hover;
+//       }
+//     }
+//   }
+
+//   .success {
+//     margin-top: 1rem;
+//     text-align: center;
+//     color: $secondary-color;
+//     font-weight: 600;
+//   }
+// }
+.form-group {
+            margin-bottom: 1.5rem; /* Space between form groups */
         }
-      }
+       .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 700; /* bold */
+    color: white;     /* أبيض */
+    font-size: 1.125rem; /* حجم مناسب */
+}
 
-      .error {
-        color: $secondary-color;
-        font-size: 0.875rem;
-        margin-top: 0.25rem;
-      }
-    }
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1px solid #d1d5db; /* Gray-300 */
+            border-radius: 0.5rem; /* Rounded corners */
+            outline: none;
+            transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: #20c997; /* Teal-500 */
+            box-shadow: 0 0 0 3px rgba(32, 201, 151, 0.2); /* Light teal shadow on focus */
+        }
+        .form-group .error {
+            color: #ef4444; /* Red-500 */
+            font-size: 0.875rem; /* Text-sm */
+            margin-top: 0.25rem;
+        }
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 2rem;
+            background-color: #20c997; /* Teal-500 */
+            color: white;
+            font-weight: 600;
+            border-radius: 0.5rem;
+            transition: background-color 0.3s ease-in-out, transform 0.1s ease-in-out;
+            cursor: pointer;
+            border: none;
+        }
+        .btn:hover {
+            background-color: #1a9c75; /* Darker teal on hover */
+            transform: translateY(-1px); /* Slight lift effect */
+        }
+        .btn:disabled {
+            background-color: #a7f3d0; /* Light teal when disabled */
+            cursor: not-allowed;
+        }
+        .success {
+            color: #10b981; /* Green-500 */
+            font-weight: 500;
+            text-align: center;
+            margin-top: 1.5rem;
+        }
+        .info-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            color: #4b5563; /* Gray-700 */
+        }
+        .info-item svg {
+            flex-shrink: 0; /* Prevent icon from shrinking */
+            margin-right: 1rem;
+            color: #20c997; /* Teal-500 */
+        }
+ .text-sm {
+    font-size: 17px;
+    line-height: 4.25rem;
 
-    button {
-      background-color: $primary-color;
-      color: $text-color-light;
-      border: none;
-      padding: 0.75rem 1.5rem;
-      border-radius: $border-radius;
-      cursor: pointer;
-      transition: background-color 0.3s;
-
-      &:disabled {
-        background-color: $primary-color-hover;
-        cursor: not-allowed;
-      }
-
-      &:hover:not(:disabled) {
-        background-color: $primary-color-hover;
-      }
-    }
-  }
-
-  .success {
-    margin-top: 1rem;
-    text-align: center;
-    color: $secondary-color;
+}
+.font-semibold {
     font-weight: 600;
-  }
+    font-size: 20px;
 }
