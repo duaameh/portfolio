@@ -1,13 +1,37 @@
 @use '../../../styles/variables' as *;
+
+// ✨ Animation keyframes
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .projects {
   padding: $section-padding;
   background-color: $dark-blue-mid;
+
+  // 🔥 Fade section on load
+  opacity: 0;
+  animation: fadeInUp 1s ease-out forwards;
+  animation-delay: 0.2s;
 
   .section-title {
     color: $primary-color;
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 2rem;
+
+    // 🔥 Animate title
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s ease-out forwards;
+    animation-delay: 0.4s;
 
     @media (max-width: 768px) {
       font-size: 2rem;
@@ -16,10 +40,8 @@
 
   .project-list {
     display: flex;
-    flex-direction: row; // Change from 'column' to 'row'
-    // OR, you can just remove the 'flex-direction' line completely as 'row' is the default.
-    flex-wrap: wrap;     // This makes them wrap to the next line if there isn't enough space
-    justify-content: center; // This centers them horizontally
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 2rem;
     max-width: $container-width;
     margin: 0 auto;
@@ -33,12 +55,13 @@
     color: white;
     transition: transform 0.3s ease;
     max-width: 700px;
-    // ⚠️ CONSIDER THIS MARGIN:
-    // This `margin: 2rem auto;` on the child element can interfere with flexbox's centering (justify-content: center)
-    // and gap spacing when you want cards to be purely row-based.
-    // If you want vertical spacing, use `margin-bottom: 2rem;` or rely on the `gap` property of the parent.
-    // For now, let's keep it as is, but be aware.
     margin: 2rem auto;
+
+    // ✨ Animate cards (default delay - can be overridden if needed)
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s ease-out forwards;
+    animation-delay: 0.6s;
 
     &:hover {
       transform: translateY(-5px);
