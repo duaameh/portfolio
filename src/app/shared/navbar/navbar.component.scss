@@ -7,57 +7,80 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 90px;
+  height: auto;
+  position: relative;
   border-bottom: 1px solid $primary-color-muted;
 
-  .logo {
-    a {
-      font-size: 2rem;
-      font-weight: bold;
-      color: $primary-color;
-      text-decoration: none;
-      transition: color 0.3s ease;
+  .logo a {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: $primary-color;
+    text-decoration: none;
+    transition: color 0.3s ease;
 
-      &:hover {
-        color: $primary-color-hover;
-      }
+    &:hover {
+      color: $primary-color-hover;
     }
+  }
+
+  .menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: $text-color-light;
+    font-size: 1.8rem;
+    cursor: pointer;
   }
 
   .nav-links {
     list-style: none;
     display: flex;
-    gap: 3rem;
+    gap: 2rem;
     margin: 0;
 
-    li {
-      a {
-        color: $text-color-light;
-        text-decoration: none;
-        font-weight: 500;
-        font-size: 1rem;
-        padding: 0.5rem;
-        border-radius: 8px;
-        transition: background-color 0.3s ease, color 0.3s ease;
+    li a {
+      color: $text-color-light;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1rem;
+      padding: 0.5rem;
+      border-radius: 6px;
+      transition: background-color 0.3s ease, color 0.3s ease;
 
-        &:hover {
-          background-color: rgba(255, 255, 255, 0.1);
-          color: $primary-color;
-        }
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+        color: $primary-color;
       }
     }
   }
-}
 
-@media (max-width: 768px) {
-  .navbar {
+  // Responsive
+  @media (max-width: 768px) {
     flex-direction: column;
     align-items: flex-start;
 
+    .menu-toggle {
+      display: block;
+      position: absolute;
+      top: 1.2rem;
+      right: 2rem;
+    }
+
     .nav-links {
       flex-direction: column;
+      width: 100%;
       gap: 1rem;
       margin-top: 1rem;
+      display: none;
+
+      &.active {
+        display: flex;
+      }
+
+      li a {
+        font-size: 1.1rem;
+        padding-left: 0;
+      }
     }
   }
 }
