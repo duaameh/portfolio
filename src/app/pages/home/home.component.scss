@@ -1,143 +1,120 @@
-// @use '../../../styles/variables' as *;
-
-// .home {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   height: 100vh;
-//   background: linear-gradient(to right, $dark-blue-start, $dark-blue-mid, $dark-blue-end);
-//   color: $text-color-light;
-//   text-align: center;
-
-//   .container {
-//     max-width: 700px;
-
-//     .profile-img {
-//       width: 120px;
-//       height: 120px;
-//       border-radius: 50%;
-//       border: 3px solid $border-color-light;
-//       margin-bottom: 1rem;
-//     }
-
-//     h1 {
-//       font-size: 2.5rem;
-//       margin: 0.5rem 0;
-//       color: $text-color-light;
-//     }
-
-//     h2 {
-//       font-weight: 300;
-//       margin-bottom: 1rem;
-//       color: $text-color-light;
-//     }
-
-//     .btn {
-//       display: inline-block;
-//       margin: 0.5rem;
-//       padding: 0.8rem 1.5rem;
-//       background-color: $primary-color;
-//       color: $text-color-light;
-//       border-radius: $border-radius;
-//       text-decoration: none;
-//       transition: 0.3s;
-
-//       &:hover {
-//         background-color: $primary-color-hover;
-//       }
-
-//       &.btn-secondary {
-//         background-color: transparent;
-//         border: 1px solid $border-color-light;
-//         color: $text-color-light;
-
-//         &:hover {
-//           background-color: $text-color-light;
-//           color: $dark-blue-end;
-//         }
-//       }
-//     }
-//   }
-// }
-
-
 @use '../../../styles/variables' as *;
+
 .home {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80vh;
+  min-height: 100vh;
+  padding: 2rem 1rem;
   background: linear-gradient(to right, $dark-blue-start, $dark-blue-mid, $dark-blue-end);
   color: $text-color-light;
 
   .container {
-    max-width: 900px;
     width: 100%;
+    max-width: 1200px;
 
     .intro {
       display: flex;
+      flex-direction: row;
       align-items: center;
-      gap: 3rem;
-      text-align: left;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 4rem;
+
+      @media (max-width: 1024px) {
+        flex-direction: column;
+        text-align: center;
+      }
 
       .intro-img {
         flex-shrink: 0;
-        
+        text-align: center;
+        margin-bottom: 1rem;
+
+
         .profile-img {
-          width: 420px;
-          height: 450px;
-//       width: 120px;
-//       height: 120px;
-      //  border-radius: 50%;
-      //  border: 3px solid $border-color-light;
-      margin-bottom: 1rem;
+          width: 320px;
+          max-width: 100%;
+          height: auto;
+          border-radius: 1rem;
+          box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+
+          @media (max-width: 768px) {
+            width: 250px;
+          }
+
+          @media (max-width: 480px) {
+            width: 180px;
+          }
         }
       }
 
       .intro-text {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1rem;
+        padding-left: 1rem; // أضفت شوية مسافة داخلية بين الصورة والكلام
+
+
         h1 {
-          font-size: 50px;
-          margin: 1.5rem 0;
+          font-size: 2.8rem;
+          margin: 0;
           color: $text-color-light;
+
+          @media (max-width: 768px) {
+            font-size: 2.2rem;
+          }
         }
 
         h2 {
-          font-weight: 300;
-              font-size: 20px;
-          margin-bottom: 1rem;
+          font-size: 1.4rem;
+          font-weight: 400;
           color: $text-color-light;
+          margin: 0;
         }
 
         p {
+          font-size: 1.1rem;
+          margin-top: 1rem;
           margin-bottom: 1.5rem;
-              font-size: 18px;
-
+          line-height: 1.6;
+          color: $text-color-light;
         }
 
-        .btn {
-          display: inline-block;
-          margin: 0.5rem;
-          font-size: 16px;
-          font-weight: bold;
-          padding: 0.8rem 1.5rem;
-          background-color: $primary-color;
-          color: $text-color-light;
-          border-radius: $border-radius;
-          text-decoration: none;
-          transition: 0.3s;
+        .buttons {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 1rem;
 
-          &:hover {
-            background-color: $primary-color-hover;
+          @media (min-width: 768px) {
+            justify-content: flex-start;
           }
 
-          &.btn-secondary {
-            background-color: transparent;
-            border: 1px solid $border-color-light;
+          .btn {
+            padding: 0.75rem 1.5rem;
+            font-weight: 600;
+            font-size: 1rem;
+            border-radius: $border-radius;
+            background-color: $primary-color;
             color: $text-color-light;
+            text-decoration: none;
+            transition: 0.3s;
 
             &:hover {
-              background-color: $text-color-light;
-              color: $dark-blue-end;
+              background-color: $primary-color-hover;
+            }
+
+            &.btn-secondary {
+              background-color: transparent;
+              border: 1px solid $border-color-light;
+
+              &:hover {
+                background-color: $text-color-light;
+                color: $dark-blue-end;
+              }
             }
           }
         }
@@ -145,4 +122,3 @@
     }
   }
 }
-

@@ -2,7 +2,7 @@
 
 .about {
   padding: 3rem 1rem;
-  background-color: $dark-blue-mid;
+  background: linear-gradient(to right, $dark-blue-start, $dark-blue-mid, $dark-blue-end);
   color: $text-color-light;
   text-align: center;
 
@@ -37,6 +37,7 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 1rem;
+    margin-bottom: 2rem;
 
     li {
       background-color: $primary-color;
@@ -73,6 +74,57 @@
       color: $text-color-muted;
       line-height: 1.7;
       font-size: 1rem;
+    }
+  }
+
+  // 🎯 Responsive
+  @media (max-width: 768px) {
+    h2 {
+      font-size: 2rem;
+    }
+
+    h3 {
+      font-size: 1.4rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+
+    .skills-list {
+      gap: 0.6rem;
+
+      li {
+        font-size: 0.85rem;
+        padding: 0.4rem 0.8rem;
+      }
+    }
+
+    .competencies {
+      padding: 0;
+
+      dt {
+        font-size: 1rem;
+      }
+
+      dd {
+        font-size: 0.95rem;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .skills-list {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+    }
+
+    h3 {
+      font-size: 1.2rem;
     }
   }
 }

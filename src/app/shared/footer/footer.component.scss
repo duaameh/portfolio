@@ -1,42 +1,72 @@
 @use '../../../styles/variables' as *;
 
 footer {
-  background-color: $background-color; // اللون الغامق القديم
+  background-color: $background-color;
   color: $text-color-muted;
-  padding: 1rem 0; // تصغير البادينغ
-  font-size: 0.85rem; // تصغير الخط
+  padding: 1.5rem 1rem;
+  font-size: 0.9rem;
   text-align: center;
   border-top: 1px solid $primary-color-muted;
 
   .footer-content {
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 0 1rem;
-  }
-
-  p {
-    margin: 0.25rem 0;
-  }
-
-  .socials {
-    margin-top: 0.5rem;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     gap: 1rem;
-    flex-wrap: wrap;
 
-    a {
-      color: $text-color-light;
-      font-size: 1.2rem;
-      transition: color 0.3s ease;
+    .footer-text {
+      p {
+        margin: 0.2rem 0;
+        line-height: 1.5;
+      }
+    }
 
-      &:hover {
-        color: $primary-color;
+    .socials {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+
+      a {
+        color: $text-color-light;
+        font-size: 1.4rem;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: $primary-color;
+        }
+
+        i {
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+}
+
+// Responsive design for spacing (optional refinement)
+@media (min-width: 768px) {
+  footer {
+    font-size: 1rem;
+
+    .footer-content {
+      gap: 1.2rem;
+
+      .footer-text {
+        p {
+          font-size: 1rem;
+        }
       }
 
-      i {
-        vertical-align: middle;
+      .socials {
+        gap: 1.2rem;
+
+        a {
+          font-size: 1.6rem;
+        }
       }
     }
   }
