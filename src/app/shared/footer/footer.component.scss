@@ -1,28 +1,43 @@
 @use '../../../styles/variables' as *;
 
 footer {
-  background: $background-color;
-  color: $text-color;
-  padding: 2rem 1rem;
+  background-color: $background-color; // اللون الغامق القديم
+  color: $text-color-muted;
+  padding: 1rem 0; // تصغير البادينغ
+  font-size: 0.85rem; // تصغير الخط
   text-align: center;
-  font-size: 0.9rem;
+  border-top: 1px solid $primary-color-muted;
 
-  a {
-    color: $primary-color;
-    text-decoration: none;
-    margin: 0 0.5rem;
-    transition: color 0.3s ease;
+  .footer-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
 
-    &:hover {
-      color: $primary-color-hover;
-    }
+  p {
+    margin: 0.25rem 0;
   }
 
   .socials {
-    margin-top: 1rem;
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
 
     a {
+      color: $text-color-light;
       font-size: 1.2rem;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $primary-color;
+      }
+
+      i {
+        vertical-align: middle;
+      }
     }
   }
 }
