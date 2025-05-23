@@ -4,19 +4,33 @@
 
     <div class="project-list">
       <div class="project-card">
-        <h3>Hotels Management System</h3>
-        <p>
-          A full-featured hotel management system for Admins, Employees, and Customers.
-          It includes room and hall reservations, service requests, and user access control.
-        </p>
-        <p><strong>Tech Stack:</strong> Angular, TypeScript, SCSS, RxJS</p>
-        <div class="links">
-          <a href="https://github.com/YOUR_USERNAME/hotel-management-system" target="_blank">View on GitHub</a>
-          <!-- <a href="https://your-live-demo.com" target="_blank">Live Demo</a> -->
+        <div class="slider">
+          <img [src]="project.images[currentImageIndex]" alt="Project Image" />
+        </div>
+
+        <div class="content">
+          <h3>{{ project.title }}</h3>
+          <p class="description">{{ project.description }}</p>
+          <p class="stack"><strong>Tech Stack:</strong> {{ project.tech }}</p>
+          <div class="links">
+            <a [href]="project.github" target="_blank">View on GitHub</a>
+            </div>
         </div>
       </div>
+        <div class="project-card">
+        <div class="slider">
+          <img [src]="project2.images[currentImageIndex]" alt="Project Image" />
+        </div>
 
-      <!-- More project cards can go here -->
-    </div>
+        <div class="content">
+          <h3>{{ project2.title }}</h3>
+          <p class="description">{{ project2.description }}</p>
+          <p class="stack"><strong>Tech Stack:</strong> {{ project2.tech }}</p>
+          <div class="links">
+            <a [href]="project2.github" target="_blank">View on GitHub</a>
+            </div>
+        </div>
+      </div>
+      </div>
   </div>
 </section>
