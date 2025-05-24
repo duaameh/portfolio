@@ -32,14 +32,14 @@
         margin-bottom: 1rem;
 
         .profile-img {
-          width: 320px;
+          width: 400px;
           max-width: 100%;
           height: auto;
           border-radius: 90%;
-          box-shadow: 0 40px 25px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 40px 25px rgba(50, 119, 119, 0.3);
 
           @media (max-width: 768px) {
-            width: 250px;
+            width: 150px;
           }
 
           @media (max-width: 480px) {
