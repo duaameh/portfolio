@@ -8,7 +8,7 @@ import {
   isPlatformServer,
   parseCookieValue,
   setRootDomAdapter
-} from "./chunk-R4MCE6RK.js";
+} from "./chunk-VUYRZGJS.js";
 import {
   APP_BOOTSTRAP_LISTENER,
   APP_ID,
@@ -16,6 +16,7 @@ import {
   ApplicationRef,
   CSP_NONCE,
   Console,
+  DestroyRef,
   ENVIRONMENT_INITIALIZER,
   EnvironmentInjector,
   ErrorHandler,
@@ -94,7 +95,7 @@ import {
   ɵɵdefineInjector,
   ɵɵdefineNgModule,
   ɵɵinject
-} from "./chunk-X46E4LQX.js";
+} from "./chunk-PUPFYMDY.js";
 
 // node_modules/@angular/platform-browser/fesm2022/dom_renderer-DGKzginR.mjs
 var EVENT_MANAGER_PLUGINS = new InjectionToken(ngDevMode ? "EventManagerPlugins" : "");
@@ -1248,7 +1249,7 @@ var BrowserModule = class _BrowserModule {
   }], () => [], null);
 })();
 
-// node_modules/@angular/common/fesm2022/module-BQ-7fJZl.mjs
+// node_modules/@angular/common/fesm2022/module-z3bvLlVg.mjs
 var HttpHandler = class {
 };
 var HttpBackend = class {
@@ -2429,7 +2430,13 @@ var FetchBackend = class _FetchBackend {
     optional: true
   })?.fetch ?? ((...args) => globalThis.fetch(...args));
   ngZone = inject(NgZone);
-  appRef = inject(ApplicationRef);
+  destroyRef = inject(DestroyRef);
+  destroyed = false;
+  constructor() {
+    this.destroyRef.onDestroy(() => {
+      this.destroyed = true;
+    });
+  }
   handle(request) {
     return new Observable((observer) => {
       const aborter = new AbortController();
@@ -2486,7 +2493,7 @@ var FetchBackend = class _FetchBackend {
         let canceled = false;
         yield this.ngZone.runOutsideAngular(() => __async(this, null, function* () {
           while (true) {
-            if (this.appRef.destroyed) {
+            if (this.destroyed) {
               yield reader.cancel();
               canceled = true;
               break;
@@ -2612,7 +2619,7 @@ var FetchBackend = class _FetchBackend {
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(FetchBackend, [{
     type: Injectable
-  }], null, null);
+  }], () => [], null);
 })();
 var FetchFactory = class {
 };
@@ -4399,7 +4406,7 @@ function provideClientHydration(...features) {
   }
   return makeEnvironmentProviders([typeof ngDevMode !== "undefined" && ngDevMode ? provideZoneJsCompatibilityDetector() : [], withDomHydration(), featuresKind.has(HydrationFeatureKind.NoHttpTransferCache) || hasHttpTransferCacheOptions ? [] : withHttpTransferCache({}), providers]);
 }
-var VERSION = new Version("19.2.12");
+var VERSION = new Version("19.2.13");
 
 export {
   EVENT_MANAGER_PLUGINS,
@@ -4442,13 +4449,13 @@ export {
 
 @angular/platform-browser/fesm2022/dom_renderer-DGKzginR.mjs:
 @angular/platform-browser/fesm2022/browser-D-u-fknz.mjs:
-@angular/common/fesm2022/module-BQ-7fJZl.mjs:
+@angular/common/fesm2022/module-z3bvLlVg.mjs:
 @angular/common/fesm2022/http.mjs:
 @angular/platform-browser/fesm2022/platform-browser.mjs:
   (**
-   * @license Angular v19.2.12
+   * @license Angular v19.2.13
    * (c) 2010-2025 Google LLC. https://angular.io/
    * License: MIT
    *)
 */
-//# sourceMappingURL=chunk-PYDICAF2.js.map
+//# sourceMappingURL=chunk-BPI6XKF2.js.map

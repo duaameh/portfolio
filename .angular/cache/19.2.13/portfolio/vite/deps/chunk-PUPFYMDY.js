@@ -15772,7 +15772,7 @@ var ComponentFactory2 = class extends ComponentFactory$1 {
     try {
       const cmpDef = this.componentDef;
       ngDevMode && verifyNotAnOrphanComponent(cmpDef);
-      const tAttributes = rootSelectorOrNode ? ["ng-version", "19.2.12"] : (
+      const tAttributes = rootSelectorOrNode ? ["ng-version", "19.2.13"] : (
         // Extract attributes and classes from the first selector only to match VE behavior.
         extractAttrsAndClassesFromSelector(this.componentDef.selectors[0])
       );
@@ -25354,7 +25354,7 @@ var Version = class {
     this.patch = parts.slice(2).join(".");
   }
 };
-var VERSION = new Version("19.2.12");
+var VERSION = new Version("19.2.13");
 var ModuleWithComponentFactories = class {
   ngModuleFactory;
   componentFactories;
@@ -29550,12 +29550,14 @@ export {
   Host,
   ENVIRONMENT_INITIALIZER,
   INJECTOR$1,
+  getComponentDef,
   isStandalone,
   makeEnvironmentProviders,
   provideEnvironmentInitializer,
   importProvidersFrom,
   INJECTOR_SCOPE,
   EnvironmentInjector,
+  R3Injector,
   runInInjectionContext,
   assertInInjectionContext,
   FactoryTarget,
@@ -29605,6 +29607,7 @@ export {
   getDirectives,
   getHostElement,
   setDocument,
+  getDocument,
   APP_ID,
   PLATFORM_INITIALIZER,
   PLATFORM_ID,
@@ -29617,6 +29620,7 @@ export {
   TransferState,
   IS_HYDRATION_DOM_REUSE_ENABLED,
   IS_INCREMENTAL_HYDRATION_ENABLED,
+  JSACTION_BLOCK_ELEMENT_MAP,
   TracingAction,
   TracingService,
   performanceMarkFeature,
@@ -29628,7 +29632,9 @@ export {
   DeferBlockState,
   DeferBlockBehavior,
   JSACTION_EVENT_CONTRACT,
+  DEHYDRATED_BLOCK_REGISTRY,
   SSR_CONTENT_INTEGRITY_MARKER,
+  HydrationStatus,
   readHydrationInfo,
   ViewEncapsulation,
   unwrapSafeValue,
@@ -29714,6 +29720,7 @@ export {
   ɵɵHostDirectivesFeature,
   devModeEqual,
   ɵɵtemplate,
+  TimerScheduler,
   DEFER_BLOCK_DEPENDENCY_INTERCEPTOR,
   DEFER_BLOCK_CONFIG,
   renderDeferBlockState,
@@ -29946,6 +29953,7 @@ export {
   assertPlatform,
   getPlatform,
   destroyPlatform,
+  createOrReusePlatformInjector,
   providePlatformInitializer,
   provideExperimentalCheckNoChangesForDebug,
   isDevMode,
@@ -29971,6 +29979,7 @@ export {
   internalCreateApplication,
   withEventReplay,
   annotateForHydration,
+  CLIENT_RENDER_MODE_FLAG,
   withDomHydration,
   withI18nSupport,
   withIncrementalHydration,
@@ -30015,14 +30024,14 @@ export {
 @angular/core/fesm2022/primitives/signals.mjs:
 @angular/core/fesm2022/primitives/event-dispatch.mjs:
   (**
-   * @license Angular v19.2.12
+   * @license Angular v19.2.13
    * (c) 2010-2025 Google LLC. https://angular.io/
    * License: MIT
    *)
 
 @angular/core/fesm2022/core.mjs:
   (**
-   * @license Angular v19.2.12
+   * @license Angular v19.2.13
    * (c) 2010-2025 Google LLC. https://angular.io/
    * License: MIT
    *)
@@ -30043,4 +30052,4 @@ export {
    * found in the LICENSE file at https://angular.dev/license
    *)
 */
-//# sourceMappingURL=chunk-X46E4LQX.js.map
+//# sourceMappingURL=chunk-PUPFYMDY.js.map
