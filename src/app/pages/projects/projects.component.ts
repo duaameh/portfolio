@@ -31,7 +31,7 @@ projects = [
     description: 'An Angular-based task management application that includes a note section ',
     tech: 'Angular, TypeScript, SCSS, HTML',
     github: 'https://github.com/duaameh/to-do-list',
-    Demo: '#',
+    Demo: '',
     images: ['3.a.jpg', '3.b.jpg', '3.c.jpg'],
     currentImageIndex: 0
   }
@@ -41,7 +41,7 @@ projects = [
     description: 'online gifting platform, which is meant to solve the problem of how to choose the right gift It presents to the users ',
     tech: 'HTML , CSS , JavaScript ,ASP.NET Core, ',
     github: 'https://github.com/duaameh/HereToYouProject',
-    Demo: '#',
+    Demo: '',
     images: ['4.a.jpg', '4.b.jpg', '4.c.jpg', '4.d.jpg'],
     currentImageIndex: 0
   }
