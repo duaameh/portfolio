@@ -1,37 +1,38 @@
-// Colors
-$primary-color: #1a73e8;
-$secondary-color: #e8f0fe;
-$text-color: #333333;
-$text-light: #555555;
-$background-light: #f9f9f9;
-$background-color: #0f2027;
-$primary-color-muted:#2c5364;
-$section-padding: 4rem 1rem;
-$white: #ffffff;
-$black: #000000;
+// Colors (Updated to match the image)
+$primary-color: #6fb0ae; // لون أقرب للأخضر الفيروزي الموجود في المزهرية وزر "About Me"
+$secondary-color: #e0e5e7; // لون الخلفية الفاتحة جداً (الرمادي الفاتح المائل للأزرق)
+$text-color: #333333; // لون النص الأساسي، يمكن أن يكون أغمق قليلاً من الأبيض على الخلفية الفاتحة
+$text-light: #555555; // لون النص الأفتح قليلاً
+$background-light: #f7f7f7; // لون خلفية أفتح جداً (الجزء العلوي من الصورة)
+$background-color: #d8e1e4; // لون خلفية أغمق قليلاً (الجزء السفلي من الصورة والمناطق المعرضة للظل)
+$primary-color-muted: #abbaba; // نسخة أفتح وأكثر هدوءًا من الـ primary color
+$section-padding: 4rem 1rem; // يبقى كما هو (لا يوجد تغيير بناءً على الصورة)
+$white: #ffffff; // يبقى كما هو
+$black: #000000; // يبقى كما هو
 
-// Shadows
-$shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.05);
-$shadow-md: 0 4px 10px rgba(0, 0, 0, 0.1);
+// Shadows (Adjusted to be softer, reflecting the light feel of the image)
+$shadow-sm: 0 1px 4px rgba(0, 0, 0, 0.03); // ظل أخف
+$shadow-md: 0 2px 8px rgba(0, 0, 0, 0.08); // ظل متوسط أخف
 
-// Border radius
-$radius: 12px;
+// Border radius (Adjusted to be slightly rounded, like the button in the image)
+$radius: 8px; // الزر "About Me" يبدو بزوايا دائرية بسيطة
+$border-radius: 8px; // لضمان التناسق مع $radius
 
-// Spacing
-$section-padding: 4rem 2rem;
-$container-width: 1200px;
+// Spacing (No visual information in the image to change these)
+$section-padding: 4rem 2rem; // يبقى كما هو
+$container-width: 1200px; // يبقى كما هو
 
-// Colors from Home Section
-$dark-blue-start: #0f2027;  // Gradient start
-$dark-blue-mid: #203a43;    // Gradient middle
-$dark-blue-end: #2c5364;    // Gradient end
+// Colors from Home Section (Updated to match the image's overall gradient and tones)
+// الصورة لا تحتوي على تدرج لوني واضح جداً كالذي تصفه "dark-blue-start"، ولكنها تحتوي على نغمات هادئة.
+// لذا، سأحاول محاكاة تدرج لوني هادئ إذا كان موجوداً، أو ألوان خلفية قريبة.
+$dark-blue-start: #d8e1e4; // لون بداية الخلفية الهادئة (الرمادي المزرق الفاتح)
+$dark-blue-mid: #cdd9db; // لون وسيط للخلفية
+$dark-blue-end: #b7c7cb; // لون نهاية الخلفية
 
-$primary-color: #00bcd4;    // Buttons bright cyan
-$primary-color-hover: #008c9e;
+$primary-color: #6fb0ae; // الأزرار بنفس لون الـ primary color المعدل
+$primary-color-hover: #5a9694; // لون الأزرار عند التمرير عليها (أغمق قليلاً)
 
-$text-color-light: white;    // Text color on dark bg
-$text-color-muted: rgba(255, 255, 255, 0.7);
+$text-color-light: #333333; // النص على الخلفية الفاتحة، ليس أبيض بالضرورة
+$text-color-muted: rgba(51, 51, 51, 0.6); // نص باهت على الخلفية الفاتحة
 
-$border-color-light: white;
-
-$border-radius: 25px;
+$border-color-light: #e0e5e7; // لون إطارات فاتح (قريب من الخلفية)

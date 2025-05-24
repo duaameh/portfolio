@@ -1,33 +1,24 @@
 @use '../../../styles/variables' as *;
 
-// ✨ Animation keyframes
+// ✨ Animation keyframes (باقية كما هي)
 @keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .projects {
   padding: $section-padding;
   background-color: $dark-blue-mid;
-
-  // 🔥 Fade section on load
   opacity: 0;
   animation: fadeInUp 1s ease-out forwards;
   animation-delay: 0.2s;
 
   .section-title {
+    /* كل إعداداتك الأصلية تبقى كما هي */
     color: $primary-color;
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 2rem;
-
-    // 🔥 Animate title
     opacity: 0;
     transform: translateY(30px);
     animation: fadeInUp 0.8s ease-out forwards;
@@ -43,30 +34,43 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 2rem;
-    max-width: $container-width;
+    max-width: 900px;
     margin: 0 auto;
     padding: 0 1rem;
-  }
 
-  .project-card {
-    border-radius: 16px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-    overflow: hidden;
-    color: white;
-    transition: transform 0.3s ease;
-    max-width: 700px;
-    margin: 2rem auto;
+    .project-card {
+      /* التعديلات الآمنة فقط */
+      flex: 1 1 400px; /* مرن بين 400px و 50% */
+      min-width: 300px;
+      max-width: calc(50% - 1rem); /* أقصى عرض 50% مع حساب الجاب */
+      
+      /* الخصائص الأصلية تبقى كما هي */
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      overflow: hidden;
+      color: white;
+      transition: transform 0.3s ease;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 0.8s ease-out forwards;
+      animation-delay: 0.6s;
 
-    // ✨ Animate cards (default delay - can be overridden if needed)
-    opacity: 0;
-    transform: translateY(30px);
-    animation: fadeInUp 0.8s ease-out forwards;
-    animation-delay: 0.6s;
+      &:hover {
+        transform: translateY(-5px); /* تأثير Hover يبقى */
+      }
 
-    &:hover {
-      transform: translateY(-5px);
+      /* حالة المشروع الواحد */
+      &:only-child {
+        flex: 0 1 600px; /* عرض ثابت أنيق */
+        max-width: 100%;
+      }
+
+      @media (max-width: 768px) {
+        flex: 1 1 100%; /* موبايل: بطاقة كاملة العرض */
+        max-width: 100%;
+      }
+
     }
-
     .slider {
       width: 100%;
       height: 220px;

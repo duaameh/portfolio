@@ -3,36 +3,22 @@
     <h2 class="section-title">My Projects</h2>
 
     <div class="project-list">
-      <div class="project-card">
-        <div class="slider">
-          <img [src]="project.images[currentImageIndex]" alt="Project Image" />
-        </div>
+    <div *ngFor="let project of projects" class="project-card">
+  <div class="slider">
+    <img [src]="project.images[project.currentImageIndex]" alt="Project Image" />
+  </div>
 
-        <div class="content">
-          <h3>{{ project.title }}</h3>
-          <p class="description">{{ project.description }}</p>
-          <p class="stack"><strong>Tech Stack:</strong> {{ project.tech }}</p>
-          <div class="links">
-            <a [href]="project.github" target="_blank">View on GitHub</a>
-            <a [href]="project.Demo" target="_blank">Live Demo</a>
+  <div class="content">
+    <h3>{{ project.title }}</h3>
+    <p class="description">{{ project.description }}</p>
+    <p class="stack"><strong>Tech Stack:</strong> {{ project.tech }}</p>
+    <div class="links">
+      <a [href]="project.github" target="_blank">View on GitHub</a>
+      <a *ngIf="project.Demo" [href]="project.Demo" target="_blank">Live Demo</a>
+    </div>
+  </div>
+</div>
 
-            </div>
-        </div>
-      </div>
-        <div class="project-card">
-        <div class="slider">
-          <img [src]="project2.images[currentImageIndex]" alt="Project Image" />
-        </div>
-
-        <div class="content">
-          <h3>{{ project2.title }}</h3>
-          <p class="description">{{ project2.description }}</p>
-          <p class="stack"><strong>Tech Stack:</strong> {{ project2.tech }}</p>
-          <div class="links">
-            <a [href]="project2.github" target="_blank">View on GitHub</a>
-            </div>
-        </div>
-      </div>
       </div>
   </div>
 </section>

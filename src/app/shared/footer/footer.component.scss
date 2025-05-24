@@ -14,7 +14,7 @@
 
 footer {
   background-color: $dark-blue-start; // نفس لون الناف بار
-  color: $text-color-muted;
+  color: #000;;
   padding: 2rem 1rem;
   text-align: center;
   border-top: 1px solid $primary-color-muted;
@@ -34,7 +34,7 @@ footer {
       p {
         margin: 0.3rem 0;
         font-size: 0.95rem;
-        color: $text-color-muted;
+        color:#000;;
         line-height: 1.6;
       }
     }
