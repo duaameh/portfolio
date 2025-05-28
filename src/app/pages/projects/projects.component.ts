@@ -22,7 +22,7 @@ projects = [
     description: 'A web-based application developed using Angular that...',
     tech: 'Angular, TypeScript, SCSS, HTML',
     github: 'https://github.com/yousefshatnawi/managmentsystem10.git',
-    Demo: '',
+    Demo: 'https://duaameh.github.io/Management-System/',
     images: ['project02.jpg', 'project03.jpg', 'project04.jpg', 'project05.jpg'],
     currentImageIndex: 0
   },
@@ -31,14 +31,14 @@ projects = [
     description: 'An Angular-based task management application that includes a note section ',
     tech: 'Angular, TypeScript, SCSS, HTML',
     github: 'https://github.com/duaameh/to-do-list',
-    Demo: '',
+    Demo: 'https://duaameh.github.io/to-do-list/',
     images: ['3.a.jpg', '3.b.jpg', '3.c.jpg'],
     currentImageIndex: 0
   }
   ,
   {
-    title: 'Furniture Selling Website (Full stack WEB APP)',
-    description: 'online gifting platform, which is meant to solve the problem of how to choose the right gift It presents to the users ',
+    title: 'HereToYou E-comerce Website (Full stack Web App)',
+    description: 'online gifting platform, which is meant to solve the problem of how to choose the right gift.. ',
     tech: 'HTML , CSS , JavaScript ,ASP.NET Core, ',
     github: 'https://github.com/duaameh/HereToYouProject',
     Demo: '',
